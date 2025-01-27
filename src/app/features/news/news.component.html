@@ -1,0 +1,103 @@
+<main id="content" role="main" style="overflow: hidden">
+  <!-- Hero Section -->
+  <div id="SVGwave1BottomSMShape" class="position-relative">
+
+    <div class="bg-img-hero text-center space-2 space-md-5 space-lg-5" style="background-image: url(/logo-hero.svg);">
+
+      <div class="w-md-80 w-lg-75 text-center mx-md-auto">
+        <div class="mb-10 mb-lg-0 mt-n5">
+          <h1 class="display-4 mt-n2 font-size-md-down-5  text-white font-weight-semi-bold">News &amp; Articles</h1>
+              </div>
+
+
+      </div>
+    </div>
+
+    <!-- SVG Background -->
+    <figure class="position-absolute right-0 bottom-0 left-0">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none"
+           x="0px" y="0px" width="100%" height="140px" viewBox="0 0 300 100"
+           style="margin-bottom: -8px; enable-background:new 0 0 300 100;" xml:space="preserve"
+           class="injected-svg js-svg-injector" data-parent="#SVGwave1BottomSMShape">
+<style type="text/css">
+  .wave-bottom-1-sm-0 {
+    fill: #FFFFFF;
+  }
+</style>
+        <g>
+  <defs>
+    <rect id="waveBottom1SMID1" width="300" height="100"></rect>
+  </defs>
+          <clipPath id="waveBottom1SMID2">
+    <use xlink:href="#waveBottom1SMID1" style="overflow:visible;"></use>
+  </clipPath>
+          <path class="wave-bottom-1-sm-0 fill-white" opacity=".4" clip-path="url(#waveBottom1SMID2)"
+                d="M10.9,63.9c0,0,42.9-34.5,87.5-14.2c77.3,35.1,113.3-2,146.6-4.7C293.7,41,315,61.2,315,61.2v54.4H10.9V63.9z"></path>
+          <path class="wave-bottom-1-sm-0 fill-white" opacity=".4" clip-path="url(#waveBottom1SMID2)"
+                d="M-55.7,64.6c0,0,42.9-34.5,87.5-14.2c77.3,35.1,113.3-2,146.6-4.7c48.7-4.1,69.9,16.2,69.9,16.2v54.4H-55.7     V64.6z"></path>
+          <path class="wave-bottom-1-sm-0 fill-white" opacity=".4" fill-opacity="0" clip-path="url(#waveBottom1SMID2)"
+                d="M23.4,118.3c0,0,48.3-68.9,109.1-68.9c65.9,0,98,67.9,98,67.9v3.7H22.4L23.4,118.3z"></path>
+          <path class="wave-bottom-1-sm-0 fill-white" clip-path="url(#waveBottom1SMID2)"
+                d="M-54.7,83c0,0,56-45.7,120.3-27.8c81.8,22.7,111.4,6.2,146.6-4.7c53.1-16.4,104,36.9,104,36.9l1.3,36.7l-372-3     L-54.7,83z"></path>
+</g>
+</svg>
+    </figure>
+    <!-- End SVG Background Section -->
+  </div>
+
+  <!-- End Hero Section -->
+
+  <!-- Blog Card Section -->
+
+
+  <div class="container space-2 space-bottom-lg-3">
+    <div class="row">
+
+      @if (isLoading()) {
+        @for (item of [1, 2, 3, 4, 5, 6]; track item) {
+          <div class="col-md-4 mb-5">
+            <app-news-loading-card></app-news-loading-card>
+          </div>
+        }
+      } @else {
+        @for (item of News; track item.id) {
+          <div class="col-md-4 mb-5">
+
+            <app-news-card [newsArticle]="item"></app-news-card>
+            <!-- End Blog Card -->
+          </div>
+
+        }
+
+
+      }
+
+
+    </div>
+
+    <div class="space-bottom-2"></div>
+    @if (!isLoading()) {
+
+      <!-- Pagination -->
+      <nav aria-label="Page navigation">
+        <ul class="pagination mb-0">
+          <li class="page-item mr-auto">
+            <a class="page-link"  aria-label="Previous">
+              <span aria-hidden="true">«</span>
+              <span class="d-none d-sm-inline-block ml-1">Prev</span>
+            </a>
+          </li>
+          <li class="page-item active"><a class="page-link" >1</a></li>
+          <li class="page-item ml-auto">
+            <a class="page-link"  aria-label="Next">
+              <span class="d-none d-sm-inline-block mr-1">Next</span>
+              <span aria-hidden="true">»</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- End Pagination -->
+    }
+  </div>
+
+</main>
