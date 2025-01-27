@@ -5,6 +5,15 @@
   <p class="text-center lead">{{heading1Tagline}}</p>
 </div>
   <h3>{{heading2}}</h3>
+  @for(items of whoWeAre; track items){
+    <p></p>
+  }
+
+  <div *ngFor="let item of whoWeAre">
+    <p>{{ item.content }}</p>
+  </div>
+
+
 </div>
 
 
