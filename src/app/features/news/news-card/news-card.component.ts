@@ -16,5 +16,6 @@ import {RouterLink} from "@angular/router";
 })
 export class NewsCardComponent {
   newsArticle = input.required< Article>();
-  protected readonly News = News;
+
+
 }

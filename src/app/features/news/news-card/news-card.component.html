@@ -1,8 +1,23 @@
 
-        <!-- Blog Card -->
-        <article class="card shadow h-100">
+
+<div class="card shadow-lg border-0">
+  <img [src]="newsArticle().imageUrl" class="card-img-top" alt="Card image 1">
+  <div class="card-body">
+    <h5 class="card-title">
+      <a [routerLink]="['/news-details', newsArticle().id]" class="no-underline">{{newsArticle().title }}</a>
+    </h5>
+    <p class="card-text">{{newsArticle().description |truncateText:120 }}</p>
+    <a class="btn btn-primary no-cursor">{{newsArticle().date }}</a>
+  </div>
+</div>
+
+
+
+
+<!-- Blog Card -->
+     <!--   <article class="card shadow h-100">
           <img class="card-img-top" [src]="newsArticle().imageUrl" alt="Image Description">
-          <div class="card-body p-5">
+          <div class="card-body ">
             <a class="d-inline-block text-muted font-weight-medium text-uppercase small mb-2"
                href="#">{{ newsArticle().category }}</a>
             <h3 class="h5 font-weight-medium">
@@ -10,14 +25,8 @@
             </h3>
             <p>{{newsArticle().description |truncateText:120 }}</p></div>
 
-          <div class="card-footer border-0 pt-0 pb-5 px-0 mx-5">
-            <div class="media align-items-center">
-              <div class="media-body d-flex justify-content-end text-muted font-size-1 ml-2">
-               {{newsArticle().date}}
-              </div>
-            </div>
-          </div>
+
         </article>
 
-
+-->
 

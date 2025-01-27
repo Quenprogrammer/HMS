@@ -1,1 +1,23 @@
-<p>homepage works!</p>
+
+<div class="container">
+<div class="">
+  <h1 class="text-center">{{heading1}}</h1>
+  <p class="text-center lead">{{heading1Tagline}}</p>
+</div>
+  <h3>{{heading2}}</h3>
+</div>
+
+
+<div class="container mt-5">
+  <div class="row">
+
+@for(item of News; track item){
+  <div class="col-md-4 mb-5">
+
+    <app-news-card [newsArticle]="item"> </app-news-card>
+    <!-- End Blog Card -->
+  </div>
+
+}
+  </div></div>
+

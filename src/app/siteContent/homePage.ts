@@ -48,3 +48,28 @@ export const whoWeAre=[
 
 export const heading3='Do you need Emergency Medical Care? Call @ 1234 56789';
 export const heading3Tagline='Fast, reliable, and expert care, when every second counts.';
+
+
+export const heading4='We Maintain Cleanliness Rules Inside Our Hospital';
+export const heading4Images=[
+  {
+    "imageURL": "image1.jpg"
+  },
+  {
+    "imageURL": "image2.jpg"
+  },
+  {
+    "imageURL": "image3.jpg"
+  },
+  {
+    "imageURL": "image4.jpg"
+  },
+  {
+    "imageURL": "image5.jpg"
+  }
+];
+
+export const heading5='We Offer Different Services To Improve Your Health';
+export const heading5Tagline='';
+
+
