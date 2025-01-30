@@ -1,0 +1,31 @@
+<main style="padding-top: 70px;">
+  <div class="container mt-5">
+    <div class="row justify-content-end">
+      <div class="col-md-6">
+        <!-- Search Box with Button -->
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search......." aria-label="Search" aria-describedby="searchButton">
+          <button class="btn btn-primary" type="button" id="searchButton" style="padding: 15px;">Search</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-2">
+  <div class="row">
+@for(items of doctors; track items.name){
+    <div class="col-md-4 my-4 ">
+      <div class="card shadow-lg">
+        <img src="/image/about.png" class="card-img-top" alt="Image 1">
+        <div class="card-body">
+          <h5 class="card-title">{{items.name}}</h5>
+          <p class="card-text">{{items.biography |truncateText:100}}</p>
+          <button class="btn btn-primary">View More</button>
+        </div>
+      </div>
+    </div>
+}
+
+  </div>
+</div>
+</main>

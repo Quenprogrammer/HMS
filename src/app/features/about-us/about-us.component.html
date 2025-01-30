@@ -1,8 +1,14 @@
 <div class="container">
 
   <div class="row">
-    <div class="col-md-5"></div>
-    <div class="col-md-7 "><h1 class="text-primary">{{AboutHeading}}</h1>
+    <div class="col-12 col-md-5">
+      <img src="/image/about.png" alt="aboutUs" class="img-fluid img-fill">
+    </div>
+
+    <div class="col-12 col-md-7 ">
+      <h4 class="mt-5  custom-underline " STYLE="color: #13c5dd"><strong>ABOUT US</strong></h4>
+
+      <h1 class="headerColor customHeader"><strong>{{AboutHeading}}</strong></h1>
       <p class="tagLine">{{tagLineHeading}}</p>
 
       <div class="row justify-content-center">
@@ -10,8 +16,8 @@
           <div class="col-3 d-flex justify-content-center">
             <div class="card logoCard text-center">
               <img class="logo" [src]="items.logo" alt="{{items.title1}}">
-              <h4>{{items.title1}}</h4>
-              <h5 style="margin-top: -10px" class="text-primary">{{items.title2}}</h5>
+              <h5 class="headerColor">{{items.title1}}</h5>
+              <h6 style="margin-top: -10px" class="headerSecondaryColor">{{items.title2}}</h6>
             </div>
           </div>
         }
@@ -26,3 +32,57 @@
   </div>
 
 </div>
+
+
+<app-call-to-action></app-call-to-action>
+
+
+
+<div class="mt-5  container-fluid  d-flex justify-content-center align-items-center"  >
+  <div class="text-center" style="width: 50%;">
+
+    <h3 class="mt-5  custom-underline text-primary"><strong>Find a doctor</strong></h3>
+
+    <h1 class="display-3"><strong>Qualified Healthcare Professionals</strong></h1>
+
+
+
+  </div>
+</div>
+
+
+<div class="container mb-5">
+  <div class="row">
+    @for(items of doctors; track items.name){
+    <div class="col-md-6 mb-4">
+  <div class="card shadow-lg border-0">
+    <div class="row">
+      <div class="col-6"><img src="/image/team.jpg" alt="aboutUs" class="profileImage"></div>
+      <div class="col-6">
+        <h2 class="text-primary mt-5">{{items.name}}</h2>
+        <h6 class="text-primary ">{{items.specialization}}</h6>
+        <p style="text-align: justify; padding: 15px">{{items.description}}</p>
+        <hr>
+<div class="row">
+  <div class="col-auto">
+    <img class="socialImageLogo" src="/logo/whatsApp.svg" alt="whatsApp">
+  </div>
+  <div class="col-auto">
+    <img class="socialImageLogo" src="/logo/facebook.svg" alt="whatsApp">
+  </div>
+</div>
+
+
+      </div>
+    </div>
+    </div>
+  </div>
+    }
+    </div>
+  <div class="center-button">
+    <button class="btn btn-primary mt-3 viewMoreDoctors" routerLink="/doctors">View All Doctors</button>
+  </div>
+
+</div>
+
+

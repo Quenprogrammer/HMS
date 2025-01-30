@@ -35,3 +35,26 @@ export const HeroAboutUsContent = [
   {title1: 'Accurate ', title2:'Testing', logo: '/logo/testing.svg',},
   {title1: 'Quality ', title2:'Equipment', logo: '/logo/equipment.svg',},
 ];
+
+
+export const doctors = [
+  {
+    name: 'Dr. Amina Bello',
+    photo: '/assets/images/amina_bello.jpg',
+    specialization: 'General Practitioner',
+    description: 'Dr. Amina is a compassionate general practitioner with over 5 years of experience in providing quality care to patients of all ages.',
+    email: 'amina.bello@example.com',
+    facebook: 'https://facebook.com/amina.bello'
+  },
+  {
+    name: 'Dr. Ibrahim Musa',
+    photo: '/assets/images/ibrahim_musa.jpg',
+    specialization: 'Pediatrician',
+    description: 'Dr. Ibrahim specializes in the care of children and has a passion for ensuring the healthy development of young patients.',
+    email: 'ibrahim.musa@example.com',
+    facebook: 'https://facebook.com/ibrahim.musa'
+  },
+
+
+];
+
