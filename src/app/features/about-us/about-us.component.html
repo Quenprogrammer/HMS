@@ -1,1 +1,28 @@
-<p>about-us works!</p>
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-5"></div>
+    <div class="col-md-7 "><h1 class="text-primary">{{AboutHeading}}</h1>
+      <p class="tagLine">{{tagLineHeading}}</p>
+
+      <div class="row justify-content-center">
+        @for(items of HeroAboutUsContent; track items.title1){
+          <div class="col-3 d-flex justify-content-center">
+            <div class="card logoCard text-center">
+              <img class="logo" [src]="items.logo" alt="{{items.title1}}">
+              <h4>{{items.title1}}</h4>
+              <h5 style="margin-top: -10px" class="text-primary">{{items.title2}}</h5>
+            </div>
+          </div>
+        }
+      </div>
+
+
+      <div class="row">
+      <div class="col-4"></div>
+    </div>
+    </div>
+
+  </div>
+
+</div>

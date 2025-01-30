@@ -24,3 +24,14 @@ const aboutUsContent = [
     content: 'We are dedicated to supporting your health journey every step of the way. Whether you need preventive care, urgent attention, or long-term management, our expert team is here to provide the best medical care for you and your family.'
   }
 ];
+
+
+
+export const AboutHeading='Best Medical Care For Yourself and Your Family';
+export const tagLineHeading='Delivering the best medical care for you and your family, with a focus on personalized treatment, compassionate support, and state-of-the-art technology. We are dedicated to your health, comfort, and well-being, providing comprehensive care that ensures peace of mind every step of the way.'
+export const HeroAboutUsContent = [
+  {title1: 'Qualified ',title2:'Doctors', logo: '/logo/doctors.svg',},
+  {title1: 'Emergency ', title2:'Services', logo: '/logo/emergency.svg',},
+  {title1: 'Accurate ', title2:'Testing', logo: '/logo/testing.svg',},
+  {title1: 'Quality ', title2:'Equipment', logo: '/logo/equipment.svg',},
+];

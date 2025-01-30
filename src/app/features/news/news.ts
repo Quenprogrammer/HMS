@@ -15,7 +15,7 @@ export const News: Article[] = [
 
   {
     id: '1',
-    imageUrl: '/img.png',
+    imageUrl: '/paramedics.png',
     category: 'Emergency Care',
     title: 'How to Handle Medical Emergencies Effectively',
     description: 'Medical emergencies can be overwhelming, but knowing how to respond can save lives. This post covers the essential steps you need to take during various emergencies, such as heart attacks, severe bleeding, or accidents. Learn the importance of staying calm, administering basic first aid, and recognizing when it’s critical to call for professional help. Prepare yourself with the knowledge to act swiftly and confidently during life-threatening situations.',

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {AboutHeading, HeroAboutUsContent, tagLineHeading} from "../../siteContent/aboutUS";
 
 @Component({
   selector: 'app-about-us',
@@ -9,4 +10,7 @@ import { Component } from '@angular/core';
 })
 export class AboutUsComponent {
 
+  protected readonly AboutHeading = AboutHeading;
+  protected readonly tagLineHeading = tagLineHeading;
+  protected readonly HeroAboutUsContent = HeroAboutUsContent;
 }
