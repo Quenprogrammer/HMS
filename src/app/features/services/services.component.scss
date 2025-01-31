@@ -3,3 +3,14 @@
   height: 100%;       /* Ensure the image takes up the full height of the container */
   object-fit: cover;  /* Make the image scale to cover the container while maintaining aspect ratio */
 }
+.custom-underline {
+  display: inline-block;
+  border-bottom: 3px solid #007bff;  /* Change color and thickness here */
+  padding-bottom: 2px;  /* Adjust spacing if needed */
+}
+.heroIMG{
+  width: 900px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 10px;
+}

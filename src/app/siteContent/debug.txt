@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Cards</title>
+   <style>
+
+    /* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Container for panels */
+.panel-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.panel {
+    border-radius: 8px;
+    padding: 20px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Maroon background for odd panels */
+.maroon {
+    background-color: #800000;
+    color: white;
+}
+
+/* White background for even panels */
+.white {
+    background-color: white;
+    color: #333;
+}
+
+/* Title styling */
+h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: inherit;
+}
+
+/* Paragraph styling */
+p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/* Responsive styling for smaller screens (sm) */
+@media (max-width: 768px) {
+    .panel-container {
+        grid-template-columns: 1fr; /* 1 panel per row on small screens */
+    }
+}
+
+   </style>
+</head>
+<body>
+    <div class="panel-container">
+        <!-- Card 1 (Maroon Background) -->
+        <div class="panel maroon">
+            <div class="panel-content">
+                <h3>Address</h3>
+                <p>514 Magnolia St. Orlando, FL 32806</p>
+            </div>
+        </div>
+        <!-- Card 2 (White Background) -->
+        <div class="panel white">
+            <div class="panel-content">
+                <h3>Phone</h3>
+                <p>Main office: +1 (786) 322 560 33</p>
+                <p>Reception room: +1 (786) 300 560 44</p>
+            </div>
+        </div>
+        <!-- Card 3 (Maroon Background) -->
+        <div class="panel maroon">
+            <div class="panel-content">
+                <h3>Schedule</h3>
+                <p>Mon - Thu: 10:00 AM - 10:00 PM</p>
+                <p>Fri - Sat: 10:00 AM - 8:00 PM</p>
+            </div>
+        </div>
+        <!-- Card 4 (White Background) -->
+        <div class="panel white">
+            <div class="panel-content">
+                <h3>Email</h3>
+                <p>Main office: office@example.com</p>
+                <p>Reception room: reception@example.com</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

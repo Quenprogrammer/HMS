@@ -1,10 +1,44 @@
-<main style="padding-top: 70px;">
-  <div class="container mt-5">
+<div class="container col-xxl-12 px-4 py-3">
+  <div class="row flex-lg-row-reverse align-items-center g-5 py-5 ">
+    <div class="col-10 col-sm-8 col-lg-6">
+      <img src="/image/img.png" class="d-block mx-lg-auto img-fluid mt-3 heroIMG" alt="Bootstrap Themes"  loading="lazy">
+    </div>
+    <div class="col-lg-6">
+      <h2 class="mt-5  custom-underline text-primary"><strong>DOCTOR's</strong></h2>
+
+      <h1 class="display-3"><strong>Qualified Healthcare Professionals</strong></h1>    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
+        <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<main >
+
+   <div class="container mt-5">
     <div class="row justify-content-end">
       <div class="col-md-6">
-        <!-- Search Box with Button -->
+        <!-- Search Box with Combo Box -->
         <div class="input-group">
-          <input type="text" class="form-control" placeholder="Search......." aria-label="Search" aria-describedby="searchButton">
+          <!-- Combo Box to select the search criterion -->
+          <select class="form-control" [(ngModel)]="searchBy" aria-label="Search Criteria">
+            <option value="name">Search by Name</option>
+            <option value="specialty">Search by Specialty</option>
+            <option value="id">Search by ID</option>
+          </select>
+
+          <!-- Search Input -->
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Search..."
+            aria-label="Search"
+            [(ngModel)]="searchTerm"
+            (input)="filterDoctors()"
+          >
+
           <button class="btn btn-primary" type="button" id="searchButton" style="padding: 15px;">Search</button>
         </div>
       </div>
@@ -12,20 +46,18 @@
   </div>
 
   <div class="container mt-2">
-  <div class="row">
-@for(items of doctors; track items.name){
-    <div class="col-md-4 my-4 ">
-      <div class="card shadow-lg">
-        <img src="/image/about.png" class="card-img-top" alt="Image 1">
-        <div class="card-body">
-          <h5 class="card-title">{{items.name}}</h5>
-          <p class="card-text">{{items.biography |truncateText:100}}</p>
-          <button class="btn btn-primary">View More</button>
+    <div class="row">
+      <div class="col-md-4 my-4" *ngFor="let doctor of filteredDoctors">
+        <div class="card shadow-lg">
+          <img src="/image/about.png" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title">{{doctor.name}}</h5>
+            <h6 class="card-title" style="color: red">{{doctor.specialty}}</h6>
+            <p class="card-text">{{doctor.biography | truncateText:100}}</p>
+            <button class="btn btn-primary">View More</button>
+          </div>
         </div>
       </div>
     </div>
-}
-
   </div>
-</div>
 </main>

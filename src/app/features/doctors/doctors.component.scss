@@ -1,0 +1,21 @@
+.custom-underline {
+  display: inline-block;
+  border-bottom: 3px solid #007bff;  /* Change color and thickness here */
+  padding-bottom: 2px;  /* Adjust spacing if needed */
+}
+.heroHeader{
+  width: 50%;
+}
+
+@media only screen and (max-width: 767px) {
+  .heroHeader{
+    width: 100%;
+  }
+}
+
+.heroIMG{
+  width: 900px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 10px;
+}
