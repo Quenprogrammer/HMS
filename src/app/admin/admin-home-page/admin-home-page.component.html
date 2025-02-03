@@ -1,0 +1,21 @@
+<div class="container col-8 mt-4">
+
+  <div class="row">
+    @for (items of adminMenu; track items.name){
+
+
+      <div class="col-md-4 mb-4">
+        <a [href]="items.link">
+          <div class="card shadow-lg">
+            <img [src]="items.logo" class="card-img-top" alt="Image 1">
+            <h6 class="text-center">
+              {{items.name}}
+            </h6>
+          </div>
+        </a>
+      </div>
+
+    }
+  </div>
+
+</div>

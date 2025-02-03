@@ -1,0 +1,18 @@
+<div class="container col-8 mt-4">
+
+  <div class="row">
+@for (items of moreMenu; track items.name){
+
+
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-lg">
+        <img [src]=items.image class="card-img-top" alt="Image 1">
+        <h6 class="text-center">
+          {{items.name}}
+        </h6>
+      </div>
+    </div>
+}
+  </div>
+
+</div>

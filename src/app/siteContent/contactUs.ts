@@ -25,3 +25,14 @@ export const contactDetails: any[] = [
     ]
   }
 ];
+
+export const socialAccount=[
+  {name:'facebook', url:'https://www.facebook.com'},
+  {name:'Wht', url:'https://www.facebook.com'},
+  {name:'facebook', url:'https://www.facebook.com'},
+  {name:'facebook', url:'https://www.facebook.com'},
+
+
+
+]
+
