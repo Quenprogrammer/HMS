@@ -1,0 +1,64 @@
+<div class="container">
+
+  <div class="container mt-5">
+    <div class="row justify-content-end">
+      <div class="col-md-6">
+        <h2>Kunya Comprehensive Hospital</h2>
+        <h1 class="display-3 mb-1" style="margin-top: -10px"><span class="text-primary"><strong>Drugs</strong></span> Store</h1>
+      </div>
+      <div class="col-md-6">
+        <!-- Search Box with Combo Box -->
+        <div class="input-group">
+          <!-- Combo Box to select the search criterion -->
+          <select class="form-control" [(ngModel)]="searchBy" aria-label="Search Criteria">
+            <option value="name">Search by Name</option>
+            <option value="specialty">Search by Specialty</option>
+            <option value="id">Search by ID</option>
+          </select>
+
+          <!-- Search Input -->
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Search..."
+            aria-label="Search"
+            [(ngModel)]="searchTerm"
+            (input)="filterDoctors()"
+          >
+
+          <button class="btn btn-primary" type="button" id="searchButton" style="padding: 15px;">Search</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row ">
+    @for ( items of drugs; track items.name){
+    <div class="col-md-3 my-3 my-md-5">
+
+      <div class="card border-0 shadow-lg h-100">
+
+        <img  [src]=items.image class="img-fluid custom" alt="">
+        <div class="card-body">
+<h4>{{items.name}}</h4>
+          <p style="margin-top: -10px">{{items.use |truncateText:30}}</p>
+<h4>Price: {{items.price}}</h4>
+          <div class="card-footer">
+          <button class="btn btn-primary mx-2">More Details</button>
+          <button class="btn btn-primary">Buy Drug</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+
+
+</div>
+
+<button (click)="openModal()">Open Modal</button>
+<app-modal
+  [isOpen]="showModal"
+  title="Welcome"
+  message="This is a simple modal example."
+  (closeModal)="closeModal()">
+</app-modal>

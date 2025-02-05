@@ -27,7 +27,14 @@
       <h4 class=" fw-bold lh-1 mb-3">Our social Accounts</h4>
 
       <div class="row">
-        <div class="col-4 col-md-3"></div>
+        @for( items of socialAccount; track items.name){
+        <div class="col-4 col-md-3">
+          <div class="card">
+          <h6>{{items.logo}}</h6>
+
+          </div>
+        </div>
+        }
       </div>
         </div>
     <div class="col-md-7 mx-auto ">

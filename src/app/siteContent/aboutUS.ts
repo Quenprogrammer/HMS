@@ -58,3 +58,10 @@ export const doctors = [
 
 ];
 
+export const socialAccount=[
+  {name:'facebook', link:'', logo:'socialIcons/facebook.png'},
+  {name:'Telegram', link:'', logo:'socialIcons/telegram.png'},
+  {name:'Instagram', link:'', logo:'/logo/facebook.svg'},
+  {name:'Gmail', link:'', logo:'/logo/facebook.svg'},
+  {name:'X', link:'', logo:'/logo/facebook.svg'},
+]

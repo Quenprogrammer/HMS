@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
 import {NgClass, NgForOf, NgIf} from "@angular/common";
 import {contactDetails} from "../../siteContent/contactUs";
+import {socialAccount} from "../../siteContent/aboutUS";
 
 @Component({
   selector: 'app-contact-us',
@@ -46,4 +47,6 @@ export class ContactUsComponent {
   isGreenCard(index: number): boolean {
     return index === 0 || index === 2;
   }
+
+  protected readonly socialAccount = socialAccount;
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {drugs} from "../../siteContent/drugs";
 
 @Component({
   selector: 'app-add-drugs',
@@ -9,4 +10,5 @@ import { Component } from '@angular/core';
 })
 export class AddDrugsComponent {
 
+  protected readonly drugs = drugs;
 }

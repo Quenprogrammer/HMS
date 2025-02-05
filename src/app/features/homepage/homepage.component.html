@@ -1,12 +1,11 @@
 
 
 <div class="container">
+  <app-schedules></app-schedules>
   <div class="d-flex justify-content-center align-items-center">
   <h1 class="text-center w-50">We Are Always Ready to Help You & Your Family</h1>
   </div>
 </div>
-
-
 
 
 
@@ -16,84 +15,38 @@
   </div>
 </div>
 
+<div *ngFor="let product of productDetails" class="product-container mb-5">
+  <h2 class="text-primary">{{ product.productName }}</h2>
+  <p><strong>Category:</strong> {{ product.productCategory }}</p>
+  <!--<p>{{ product.productDescription }}</p>-->
 
-<!--
+  <div class="text-center mb-4">
+    <img *ngIf="product.productPhotosUrls.length > 0"
+         [src]="product.productPhotosUrls[0].largeImage"
+         alt="{{ product.productName }}"
+         class="product-main-image">
+  </div>
 
-<div class="container">
-  <h1><span style="color: red;">G</span>oogle</h1>
-
-  <div class="row">
-
-    <div class="col-12 col-md-8 mb-3">
-
-      <input class="p-2 w-100" style="border-radius: 1.2rem;" type="text" >
-
-
-    </div>
-    <div class="col-4">
-      <button class="btn btn-primary">Search</button>
-      <button class="btn btn-danger">EXIT</button>
-
-
+  <h3 class="text-secondary">Product Images</h3>
+  <div class="d-flex flex-wrap justify-content-start">
+    <div *ngFor="let photo of product.productPhotosUrls" class="p-2">
+      <img [src]="photo.smallImage"
+           [alt]="product.productName"
+           class="product-thumbnail">
     </div>
   </div>
 
-
-
-  <div class="row">
-
-
-
-    <div class="col-md-4 shadow-lg border-0">
-      <div class="card " style=" padding: 0; border: none;">
-        <div class=" ">
-          <h1 class="p-2">Drive</h1>
-          <img style="border-radius: 0; height: 15rem;"  src="/image/img_2.png">
-
-        </div>
-
-        <div class="card-body">
-        </div>
-
-      </div>
-
-
-    </div>
-    <div class="col-md-3 shadow-lg">
-      <div class="card " style=" padding: 0; border: none;">
-        <div class=" ">
-          <h1 class="p-2">Drive</h1>
-          <img style="border-radius: 0; height: 15rem; width:100%"  src="/image/img_2.png">
-
-        </div>
-
-        <div class="card-body">
-        </div>
-
-      </div>
-
-
-    </div>
-    <div class="col-md-4 shadow-lg">
-      <div class="card " style=" padding: 0; border: none;">
-        <div class=" ">
-          <h1 class="p-2">Drive</h1>
-          <img style="border-radius: 0; height: 15rem;"  src="/image/img_2.png">
-
-        </div>
-
-        <div class="card-body">
-        </div>
-
-      </div>
-
-
-    </div>
-
-
-  </div>
-
-
+  <h3 class="text-secondary">Recommended Products</h3>
+  <ul class="list-unstyled">
+    <li *ngFor="let recommended of product.recommendedProducts" class="recommended-item mb-3">
+      <a [href]="recommended.productUrl" class="d-flex align-items-center">
+        <img [src]="recommended.image"
+             [alt]="recommended.productName"
+             width="50" height="50"
+             class="recommended-product-image">
+        <span class="ml-2">{{ recommended.productName }}</span>
+      </a>
+    </li>
+  </ul>
 </div>
 
--->

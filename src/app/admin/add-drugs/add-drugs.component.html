@@ -1,1 +1,23 @@
-<p>add-drugs works!</p>
+
+<div class="container">
+  <div class="row">
+    @for(items of drugs; track  items.name){
+      <div class="col-md-4 mb-3 shadow-lg">
+        <div class="card  border-0">
+          <div class="card-head">
+            <h1>{{items.name}}</h1>
+            <div>
+          <div class="card-body">
+
+            <p>{{items.use}}</p>
+            <p>{{items.info}}</p>
+            <p>{{items.info}}</p>
+          </div>
+        </div>
+          </div>
+
+  </div>
+</div>
+    }
+  </div>
+</div>
