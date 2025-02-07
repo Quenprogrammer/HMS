@@ -10,6 +10,7 @@ export const routes: Routes = [
   { path: 'doctors', loadComponent: () => import('./features/doctors/doctors.component').then(_ => _.DoctorsComponent) },
   { path: 'store', loadComponent: () => import('./features/store/store.component').then(_ => _.StoreComponent) },
   { path: 'contactUs', loadComponent: () => import('./features/contact-us/contact-us.component').then(_ => _.ContactUsComponent) },
+  { path: 'signUp', loadComponent: () => import('./features/signup/signup.component').then(_ => _.SignupComponent) },
   { path: 'services', loadComponent: () => import('./features/services/services.component').then(_ => _.ServicesComponent) },
    { path: 'news-details/:id', loadComponent: () => import('./features/news/news-detail-page/news-detail-page.component').then(_ => _.NewsDetailPageComponent) },
 
@@ -24,5 +25,6 @@ export const routes: Routes = [
   { path: 'database', loadComponent: () => import('./admin/database/database.component').then(_ => _.DATABASEComponent) },
   { path: 'schedules', loadComponent: () => import('./admin/schedules/schedules.component').then(_ => _.SchedulesComponent) },
   { path: 'users', loadComponent: () => import('./admin/users/users.component').then(_ => _.UsersComponent) },
+  { path: 'category/:category', loadComponent: () => import('./fortuneProducts/catgory/catgory.component').then(_ => _.CatgoryComponent) },
 
 ];

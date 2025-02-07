@@ -3,6 +3,8 @@ import {doctors } from "../../siteContent/doctors";
 import {TruncateTextPipe} from "../../shared/truncate-text-pipe/truncate-text.pipe";
 import {NgForOf} from "@angular/common";
 import {FormsModule} from "@angular/forms";
+import {HospitalTagComponent} from "../../core/components/hospital-tag/hospital-tag.component";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-doctors',
@@ -10,7 +12,9 @@ import {FormsModule} from "@angular/forms";
   imports: [
     TruncateTextPipe,
     NgForOf,
-    FormsModule
+    FormsModule,
+    HospitalTagComponent,
+    RouterLink
   ],
   templateUrl: './doctors.component.html',
   styleUrl: './doctors.component.scss'

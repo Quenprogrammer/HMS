@@ -1,0 +1,29 @@
+.faq-container {
+  margin: 20px;
+}
+
+.faq-item {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.faq-item h2 {
+  font-size: 1.5em;
+  color: #333;
+}
+
+.faq-item p {
+  font-size: 1em;
+  color: #555;
+}
+
+.faq-item ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.faq-item ul li {
+  margin: 5px 0;
+}

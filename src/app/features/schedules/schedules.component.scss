@@ -1,0 +1,16 @@
+/* Remove bullet points from the list */
+ul {
+  list-style-type: none;
+  padding-left: 0; /* Optional: removes any padding (indenting) */
+}
+
+li {
+  margin-left: 0; /* Optional: removes margin for list items if needed */
+}
+.col{
+  font-size: 30px;
+}
+.tbl{
+  font-size: 20px;
+  padding: 5px;
+}

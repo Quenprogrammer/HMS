@@ -15,38 +15,6 @@
   </div>
 </div>
 
-<div *ngFor="let product of productDetails" class="product-container mb-5">
-  <h2 class="text-primary">{{ product.productName }}</h2>
-  <p><strong>Category:</strong> {{ product.productCategory }}</p>
-  <!--<p>{{ product.productDescription }}</p>-->
 
-  <div class="text-center mb-4">
-    <img *ngIf="product.productPhotosUrls.length > 0"
-         [src]="product.productPhotosUrls[0].largeImage"
-         alt="{{ product.productName }}"
-         class="product-main-image">
-  </div>
 
-  <h3 class="text-secondary">Product Images</h3>
-  <div class="d-flex flex-wrap justify-content-start">
-    <div *ngFor="let photo of product.productPhotosUrls" class="p-2">
-      <img [src]="photo.smallImage"
-           [alt]="product.productName"
-           class="product-thumbnail">
-    </div>
-  </div>
-
-  <h3 class="text-secondary">Recommended Products</h3>
-  <ul class="list-unstyled">
-    <li *ngFor="let recommended of product.recommendedProducts" class="recommended-item mb-3">
-      <a [href]="recommended.productUrl" class="d-flex align-items-center">
-        <img [src]="recommended.image"
-             [alt]="recommended.productName"
-             width="50" height="50"
-             class="recommended-product-image">
-        <span class="ml-2">{{ recommended.productName }}</span>
-      </a>
-    </li>
-  </ul>
-</div>
 

@@ -7,15 +7,16 @@
   width: 50%;
 }
 
-@media only screen and (max-width: 767px) {
-  .heroHeader{
-    width: 100%;
-  }
-}
+
 
 .heroIMG{
   width: 900px;
   height: 450px;
   object-fit: cover;
   border-radius: 10px;
+}
+.docIMG{
+  height: 400px;
+  object-fit: cover;
+  width: 100%;
 }

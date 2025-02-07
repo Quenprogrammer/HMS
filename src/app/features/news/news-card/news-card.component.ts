@@ -15,6 +15,7 @@ import {RouterLink} from "@angular/router";
     styleUrl: './news-card.component.scss'
 })
 export class NewsCardComponent {
+
   newsArticle = input.required< Article>();
 
 

@@ -1,12 +1,22 @@
+
+
+
+
+
+
+
+
 <main id="content" role="main">
   <!-- Article Description Section -->
   <div class="container space-2">
     <div class="w-lg-60 mx-lg-auto">
       <div class="mb-4">
-        <h1 class="h2 font-weight-medium">{{news?.title}}</h1>
+        <h1 class="display-4 text-center pb-2 pb-lg-3">{{news?.title}}</h1>
       </div>
 
-
+      <div class="my-8">
+        <img class="img-fluid rounded" style="height: 25rem; width: 100%; object-fit: cover" [src]="news?.imageUrl" alt="Image Description">
+      </div>
       <p></p>
     </div>
 

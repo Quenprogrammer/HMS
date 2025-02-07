@@ -1,7 +1,7 @@
 
 
 <div class="card shadow-lg border-0">
-  <img [src]="newsArticle().imageUrl" class="card-img-top" alt="Card image 1">
+  <img [src]="newsArticle().imageUrl" class="card-img-top blogImg" alt="Card image 1">
   <div class="card-body">
     <h5 class="card-title">
       <a [routerLink]="['/news-details', newsArticle().id]" class="no-underline">{{newsArticle().title }}</a>

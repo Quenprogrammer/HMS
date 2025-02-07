@@ -1,0 +1,6 @@
+<div class="faq-container">
+  <div *ngFor="let faq of faqData" class="faq-item">
+    <h2>{{ faq.question }}</h2>
+    <p [innerHTML]="faq.answer"></p>
+  </div>
+</div>
