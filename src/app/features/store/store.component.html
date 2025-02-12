@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container " style="margin-top: 90px">
 
   <div class="container mt-5">
     <div class="row justify-content-end">
@@ -33,14 +33,14 @@
   </div>
   <div class="row ">
     @for ( items of drugs; track items.name){
-    <div class="col-md-3 my-3 my-md-5">
+    <div class="col-md-4 my-3 my-md-3">
 
       <div class="card border-0 shadow-lg h-100">
 
-        <img  [src]=items.image class="img-fluid custom" alt="">
+        <img loading="lazy" [src]=items.image class="img-fluid custom" alt="">
         <div class="card-body">
 <h4>{{items.name}}</h4>
-          <p style="margin-top: -10px">{{items.use |truncateText:30}}</p>
+          <p style="">{{items.use |truncateText:30}}</p>
 <h4>Price: {{items.price}}</h4>
           <div class="card-footer">
           <button class="btn btn-primary mx-2">More Details</button>

@@ -35,7 +35,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+
+            ]
           },
           "configurations": {
             "production": {
@@ -93,9 +95,14 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "/covido-html/css/responsive.css",
+              "/covido-html/css/style.css",
+              "/covido-html/css/bootstrap.min.css",
+              "/covido-html/css/owl.carousel.min.css"
             ],
-            "scripts": []
+            "scripts": [
+            ]
           }
         }
       }

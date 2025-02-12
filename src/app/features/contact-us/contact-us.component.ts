@@ -3,6 +3,7 @@ import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from "@angular/
 import {NgClass, NgForOf, NgIf} from "@angular/common";
 import {contactDetails} from "../../siteContent/contactUs";
 import {socialAccount} from "../../siteContent/aboutUS";
+import {HospitalTagComponent} from "../../core/components/hospital-tag/hospital-tag.component";
 
 @Component({
   selector: 'app-contact-us',
@@ -11,7 +12,8 @@ import {socialAccount} from "../../siteContent/aboutUS";
     ReactiveFormsModule,
     NgIf,
     NgForOf,
-    NgClass
+    NgClass,
+    HospitalTagComponent
   ],
   templateUrl: './contact-us.component.html',
   styleUrl: './contact-us.component.scss'

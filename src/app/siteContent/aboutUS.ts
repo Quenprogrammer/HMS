@@ -1,4 +1,5 @@
-const aboutUsContent = [
+export const aboutUsContent =
+  [
   {
     title: 'Our Mission',
     content: 'At our healthcare facility, we are committed to providing the highest quality medical care to individuals and families. Our mission is to offer comprehensive, compassionate, and effective healthcare services to ensure the well-being of our community.'
@@ -7,10 +8,17 @@ const aboutUsContent = [
     title: 'Our Values',
     content: 'We uphold the values of integrity, excellence, and empathy. We believe in putting the needs of our patients first, maintaining the highest standards of care, and fostering a culture of respect and understanding in every aspect of healthcare.'
   },
-  {
+    ]
+
+export const whyChooseUsContent =[
+  {photo:'/kanoLogo.png',
     title: 'Why Choose Us',
     content: 'With a team of experienced doctors, nurses, and healthcare professionals, we are equipped with the latest medical technologies and cutting-edge treatments to provide exceptional care. We prioritize your health and comfort, offering personalized treatment plans tailored to your needs.'
-  },
+  },]
+
+
+
+export const whyWeAreTheBest=[
   {
     title: 'Comprehensive Care for All Ages',
     content: 'From newborns to the elderly, we offer a wide range of services, including pediatric care, adult medicine, and geriatric support. We understand the unique healthcare needs of every stage of life and provide expert care for your entire family.'
@@ -37,7 +45,7 @@ export const HeroAboutUsContent = [
 ];
 
 
-export const doctors = [
+/*export const doctors = [
   {
     name: 'Dr. Amina Bello',
     photo: '/assets/images/amina_bello.jpg',
@@ -56,12 +64,12 @@ export const doctors = [
   },
 
 
-];
+];*/
 
 export const socialAccount=[
   {name:'facebook', link:'', logo:'socialIcons/facebook.png'},
   {name:'Telegram', link:'', logo:'socialIcons/telegram.png'},
-  {name:'Instagram', link:'', logo:'/logo/facebook.svg'},
-  {name:'Gmail', link:'', logo:'/logo/facebook.svg'},
-  {name:'X', link:'', logo:'/logo/facebook.svg'},
+  {name:'Gmail', link:'', logo:'/logo/gmail.svg'},
+  {name:'Whatsapp', link:'', logo:'/logo/whatsApp.svg'},
+
 ]

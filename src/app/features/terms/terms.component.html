@@ -1,0 +1,23 @@
+<div class="container">
+  <app-hospital-tag></app-hospital-tag>
+
+
+
+
+
+<div class="card">
+
+    <h1>Website Terms and Conditions</h1>
+@for(items of generalWebsiteTerms; track items.section){
+  <p class="fs-lg pb-4 pb-xl-5" [innerHTML]="items?.description | newsPipe"></p>
+      <h2>{{ items.section }}</h2>
+      <p>{{ items.description }}</p>
+}
+    </div>
+
+
+</div>
+
+
+
+

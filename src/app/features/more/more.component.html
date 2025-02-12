@@ -17,12 +17,14 @@
 
 
     <div class="col-4 col-md-3 mb-4">
+      <a [routerLink]="items.link" class="text-decoration-none">
       <div class="card shadow-lg">
         <img [src]=items.image class="card-img-top" alt="Image 1">
         <h6 class="text-center">
           {{items.name}}
         </h6>
       </div>
+      </a>
     </div>
 }
   </div>

@@ -51,9 +51,9 @@
 
   <div class="container mt-2">
     <div class="row">
-      <div class="col-md-3 my-4" *ngFor="let doctor of filteredDoctors">
+      <div class="col-md-4 my-4" *ngFor="let doctor of filteredDoctors">
         <div class="card shadow-lg">
-          <img [src]="doctor.image" class="card-img-top docIMG" alt="Image 1">
+          <img loading="lazy" [src]="doctor.image" class="card-img-top docIMG" alt="Image 1">
           <div class="card-body">
             <h5 class="card-title">{{doctor.name}}</h5>
             <h6 class="card-title" style="color: red">{{doctor.specialty}}</h6>

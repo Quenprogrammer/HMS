@@ -1,18 +1,27 @@
-<div class="container mt-5">
-  <h2>Drug Upload Form</h2>
+<div style="margin-top: 100px" class="container my-element mb-5">
+ <div class="shadow-lg p-3">
+  <h2 class="mb-4 ">Drug Upload Form</h2>
 
   <form [formGroup]="drugForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
-      <label for="name">Drug Name</label>
+
       <input type="text" class="form-control" id="name" formControlName="name" placeholder="Enter drug name" />
       <div *ngIf="drugForm.get('name')?.touched && drugForm.get('name')?.invalid" class="text-danger">
         <small *ngIf="drugForm.get('name')?.hasError('required')">Drug name is required</small>
         <small *ngIf="drugForm.get('name')?.hasError('minlength')">Drug name must be at least 3 characters</small>
       </div>
     </div>
+    <div class="form-group">
+
+      <input type="text" class="form-control" id="photo" formControlName="name" placeholder="Enter drug photo address" />
+      <div *ngIf="drugForm.get('photo')?.touched && drugForm.get('name')?.invalid" class="text-danger">
+        <small *ngIf="drugForm.get('photo')?.hasError('required')">Photo Address is required</small>
+        <small *ngIf="drugForm.get('photo')?.hasError('minlength')">Photo Address is required</small>
+      </div>
+    </div>
 
     <div class="form-group mt-3">
-      <label for="use">Drug Use</label>
+
       <input type="text" class="form-control" id="use" formControlName="use" placeholder="Enter drug use" />
       <div *ngIf="drugForm.get('use')?.touched && drugForm.get('use')?.invalid" class="text-danger">
         <small *ngIf="drugForm.get('use')?.hasError('required')">Drug use is required</small>
@@ -20,7 +29,7 @@
     </div>
 
     <div class="form-group mt-3">
-      <label for="price">Price</label>
+
       <input type="number" class="form-control" id="price" formControlName="price" placeholder="Enter price" />
       <div *ngIf="drugForm.get('price')?.touched && drugForm.get('price')?.invalid" class="text-danger">
         <small *ngIf="drugForm.get('price')?.hasError('required')">Price is required</small>
@@ -29,25 +38,16 @@
     </div>
 
     <div class="form-group mt-3">
-      <label for="info">Additional Information</label>
+
       <textarea class="form-control" id="info" formControlName="info" placeholder="Enter additional information" rows="4"></textarea>
       <div *ngIf="drugForm.get('info')?.touched && drugForm.get('info')?.invalid" class="text-danger">
         <small *ngIf="drugForm.get('info')?.hasError('required')">Information is required</small>
       </div>
     </div>
 
-    <div class="form-group mt-3">
-      <label for="image">Drug Image</label>
-      <input type="file" class="form-control" id="image" (change)="onImageChange($event)" formControlName="image" />
-      <div *ngIf="drugForm.get('image')?.touched && drugForm.get('image')?.invalid" class="text-danger">
-        <small *ngIf="drugForm.get('image')?.hasError('required')">Image is required</small>
-      </div>
-      <!-- Display image preview if available -->
-      <div *ngIf="imagePreview" class="mt-3">
-        <img [src]="imagePreview" alt="Image preview" class="img-fluid" style="max-height: 300px; object-fit: cover;">
-      </div>
-    </div>
+
 
     <button type="submit" class="btn btn-primary mt-3" [disabled]="drugForm.invalid">Submit</button>
   </form>
+ </div>
 </div>

@@ -1,1 +1,54 @@
-<p>admin-auth works!</p>
+<div class="about mt-3 ">
+  <div class="container_width" #statisticsSection>
+    <div class="row d_flex">
+      <div class="col-md-12">
+        <div class="titlepage text_align_left">
+          <h2>dashboard </h2>
+
+          <div class="row mt-2" >
+            <div class="col-4 col-md-2" *ngFor="let stat of statistics; let i = index">
+              <div class=" display-4 text-primary mb-0 text-center">{{ stat.animatedValue || 0 }}</div>
+             <h5 class="mt-0 mb-3 text-center">{{ stat.label }}</h5>
+            </div>
+          </div>
+
+
+
+
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="col-md-8 mx-auto">
+<div class="container mt-5" >
+  <div class="row">
+
+    @for (items of moreMenu; track items.name){
+
+      <div class="col-3 col-md-2 mb-3">
+
+        <a [routerLink]="items.link" class="text-decoration-none">
+          <div class="card border-0 shadow-lg" style="border-radius: 13px">
+            <img [src]=items.image class="card-img-top imgNew mx-auto rounded-2 mt-2 mb-2" alt="Image 1">
+
+          </div>
+         <h3 class="text-center">  {{items.name}} </h3>
+        </a>
+
+      </div>
+
+
+    }
+  </div>
+</div>
+</div>
+
+

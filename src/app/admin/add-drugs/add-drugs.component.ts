@@ -15,7 +15,7 @@ import {NgIf} from "@angular/common";
 })
 export class AddDrugsComponent  implements OnInit{
   drugForm!: FormGroup;
-  imagePreview: string | null = null; // For displaying the uploaded image preview
+
 
   constructor(private fb: FormBuilder) { }
 
@@ -26,21 +26,11 @@ export class AddDrugsComponent  implements OnInit{
       use: ['', [Validators.required]], // Use field with validation
       price: ['', [Validators.required, Validators.min(0)]], // Price field with validation
       info: ['', [Validators.required]], // Info field with validation
-      image: [null, [Validators.required]] // Image field with validation
+      photo: ['', [Validators.required]], // Info field with validation
+
     });
   }
 
-  // Handle image file change and show preview
-  onImageChange(event: any): void {
-    const file = event.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = () => {
-        this.imagePreview = reader.result as string;
-      };
-      reader.readAsDataURL(file);
-    }
-  }
 
   // Handle form submission
   onSubmit(): void {

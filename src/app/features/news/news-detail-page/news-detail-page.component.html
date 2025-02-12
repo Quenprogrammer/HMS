@@ -15,17 +15,14 @@
       </div>
 
       <div class="my-8">
-        <img class="img-fluid rounded" style="height: 25rem; width: 100%; object-fit: cover" [src]="news?.imageUrl" alt="Image Description">
+        <img class="img-fluid rounded" style="height: 30rem; width: 100%; object-fit: cover" [src]="news?.imageUrl" alt="Image Description">
       </div>
       <p></p>
     </div>
 
-    <div class="my-8">
-      <img class="img-fluid rounded" style="height: 25rem; width: 100%; object-fit: cover" [src]="news?.imageUrl" alt="Image Description">
-    </div>
 
     <div class="w-lg-75 mx-lg-auto">
-      <p style="text-align: justify;">{{news?.description}}</p>
+      <p class="lead" style="text-align: justify;">{{news?.description}}</p>
 
 
       <h3 class="h5">News Based On:{{news?.category}}</h3>
@@ -41,32 +38,15 @@
           <div class="col-md-7 mb-5 mb-md-0">
             <div class="media align-items-center">
               <div class="u-avatar">
-                <img class="img-fluid rounded-circle" src="/logo3.svg" alt="Image Description">
+                <img style="width:80px; height:80px" class="img-fluid rounded-circle" src="kanoLogo.png" alt="Image Description">
               </div>
               <div class="media-body font-size-1 ml-3">
-                <span class="h6 font-weight-medium"><a href="blog-profile.html">Center Management</a></span>
+                <span class="h6 font-weight-medium"><a >Center Management</a></span>
                 <span class="d-block text-muted">{{news?.date}}</span>
               </div>
             </div>
           </div>
-          <div class="col-md-5">
-            <div class="d-md-flex justify-content-md-end align-items-md-center">
-              <h2 class="text-secondary font-size-1 font-weight-medium text-uppercase mb-0">Share:</h2>
 
-              <a class="btn btn-sm btn-icon btn-soft-secondary btn-bg-transparent rounded-circle ml-2" href="#">
-                <span class="fab fa-facebook-f btn-icon__inner"></span>
-              </a>
-              <a class="btn btn-sm btn-icon btn-soft-secondary btn-bg-transparent rounded-circle ml-2" href="#">
-                <span class="fab fa-twitter btn-icon__inner"></span>
-              </a>
-              <a class="btn btn-sm btn-icon btn-soft-secondary btn-bg-transparent rounded-circle ml-2" href="#">
-                <span class="fab fa-instagram btn-icon__inner"></span>
-              </a>
-              <a class="btn btn-sm btn-icon btn-soft-secondary btn-bg-transparent rounded-circle ml-2" href="#">
-                <span class="fab fa-telegram btn-icon__inner"></span>
-              </a>
-            </div>
-          </div>
         </div>
       </div>
       <!-- End Author -->

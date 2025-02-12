@@ -1,20 +1,175 @@
 
 
-<div class="container">
-  <app-schedules></app-schedules>
-  <div class="d-flex justify-content-center align-items-center">
-  <h1 class="text-center w-50">We Are Always Ready to Help You & Your Family</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body class="main-layout">
+
+<!-- end header -->
+<div class="full_bg">
+  <!-- header inner -->
+  <div class="section">
+    <!-- carousel code -->
+    <div id="banner1" class="carousel slide slider_main">
+      <ol class="carousel-indicators ">
+        <li data-target="#banner1" data-slide-to="0" class="indicator-li-1">01</li>
+        <li data-target="#banner1" data-slide-to="1" class="">02</li>
+        <li data-target="#banner1" data-slide-to="2" class="active">03</li>
+      </ol>
+      <div class="carousel-inner">
+        <!-- first slide -->
+        <div class="carousel-item active">
+          <div class="carousel-caption cuplle">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-8">
+                  <div class="photog">
+                    <h1 class="" >Best Healthcare In Your city</h1>
+                    <a class="read_more" href="javascript:void(0)" >Who we are</a>
+                    <a class="read_more" routerLink="/aboutUs" >Book Appointment</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
   </div>
 </div>
+<!-- end banner -->
+<!-- about -->
+<div class="about ">
+  <div class="container_width" #statisticsSection>
+    <div class="row d_flex">
+      <div class="col-md-7">
+        <div class="titlepage text_align_left">
+          <h2>About Corona Virus </h2>
+          <p>English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for
+          </p>
+           <div class="row" >
+             <div class="col-md-4" *ngFor="let stat of statistics; let i = index">
+               <div class="h1 display-4 text-primary mb-0 text-center">{{ stat.animatedValue || 0 }}</div>
+               <span class="text-center" ><strong><p>{{ stat.label }}</p></strong></span>
+             </div>
+           </div>
 
 
 
-<div class="container">
-  <div class="d-flex justify-content-center align-items-center">
-    <h1 class="text-center w-50">We Maintain Cleanliness Rules Inside Our Hospital</h1>
+          <a class="read_more" href="about.html">About More</a>
+        </div>
+      </div>
+
+      <div class="col-md-5">
+        <div class="about_img text_align_center">
+          <figure><img src="/covido-html/images/about.png" alt="#"/></figure>
+        </div>
+      </div>
+
+    </div>
   </div>
 </div>
+<!-- end about -->
+<!-- coronata -->
+<div class="coronata">
+  <div class="container">
+    <div class="row d_flex grid">
+      <div class="col-md-7">
+        <div class="coronata_img text_align_center">
+          <figure><img src="/covido-html/images/corona.png" alt="#"/></figure>
+        </div>
+      </div>
+      <div class="col-md-5 oder1">
+        <div class="titlepage text_align_left">
+          <h2>Our Drugs Store</h2>
+          <p>Looking for quality and original drugs approved by NAFDAC. check our store to find out
+          </p>
+          <a class="read_more" routerLink="/store">Visit store</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end coronata -->
+
+<!-- protect -->
 
 
+<!-- end protect -->
+<!-- cases -->
+
+<!-- end cases -->
+<!-- doctors -->
+<div class="doctors">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="titlepage text_align_center ">
+          <h2>Our Doctors...</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row d_flex">
+      @for(items of doctors; track items.name){
+      <div class=" col-md-6">
+        <div id="ho_efcet" class="reader text_align_center">
+          <i><img style="width: 150px; height: 150px" [src]="items.image" alt="#"/></i>
+          <h3>{{items.name}}</h3>
+          <p>{{items.biography}}</p>
+          <span><img src="/covido-html/images/do.png" alt="#"/></span>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</div>
+<!-- end cases -->
+<!-- update -->
+<div class="cases">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="titlepage text_align_center ">
+          <h2>News and Updates</h2>
+          <p>making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful</p>
+        </div>
+      </div>
+    </div>
+    <div class="row d_flex">
+@for(items of News; track items.title){
+      <div class=" col-md-4">
+        <div class="latest text_align_center">
+          <figure><img [src]="items.imageUrl" alt="#"/></figure>
+
+          <a [routerLink]="['/news-details', items.id]" class="read_more" >Read More</a>
+          <p class="lead">{{items.title}}</p>
+          <div class="nostrud">
+            <h3>{{items.category}}</h3>
+            <p>{{items.description | truncateText:150}}</p>
+          </div>
+        </div>
+      </div>
+}
+    </div>
+  </div>
+</div>
+\
+<!-- update -->
+<!--  footer -->
 
 
+</body>

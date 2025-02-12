@@ -1,89 +1,140 @@
 
-<div class="container">
+<div class="navbar-dark bg-primary" style="background-image: url(/custome/footer-bg.png);">
 
-  <div class="row">
-    <div class="col-12 col-md-5">
-      <img src="/image/about.png" alt="aboutUs" class="img-fluid img-fill">
+  <div class="container" style="padding: 5rem 0;">
+    <div class="w-md-65 w-lg-100 d-flex justify-content-center align-items-center">
+      <div>
+        <h1 class="display-2 text-white" style="margin-top: 5rem; padding: 0">ABOUT US</h1>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center" style="background-color: 	#8B0000">
+
+    <button   type="button" class="btn btn-outline-primary btn-custom-hover" style="color: white; font-size: 20px">Who we are</button>
+
+
+    <button   type="button" class="btn btn-outline-primary btn-custom-hover" style="color: white; font-size: 20px">Mission & Values</button>
+    <button type="button" class="btn btn-outline-primary btn-custom-hover" style="color: white; font-size: 20px" routerLink="/core-aspect">Core Aspect</button>
+
+  </div>
+
+
+</div>
+
+
+
+
+<div class="mx-auto overflow-hidden " >
+  <div class="container">
+<div class="row">
+  <div class="col-12 col-md-6">
+    <img style="height:500px" src="/image/about.png" alt="aboutUs" class="img-fluid img-fill">
+  </div>
+
+  <div class="col-12 col-md-6 ">
+
+
+    <h2 class="headerColor customHeader"><strong>{{AboutHeading}}</strong></h2>
+    <p class="lead mb-3">{{tagLineHeading}}</p>
+
+    <div class="row justify-content-center">
+      @for(items of HeroAboutUsContent; track items.title1){
+        <div class="col-3 d-flex justify-content-center">
+          <div class="card logoCard text-center">
+            <img  class="logo mb-1" [src]="items.logo" alt="{{items.title1}}">
+            <h5 class="headerColor text-center">{{items.title1}}</h5>
+            <h6 style="" class="headerSecondaryColor">{{items.title2}}</h6>
+          </div>
+        </div>
+      }
     </div>
 
-    <div class="col-12 col-md-7 ">
-      <h4 class="mt-5  custom-underline " STYLE="color: #13c5dd"><strong>ABOUT US</strong></h4>
 
-      <h1 class="headerColor customHeader"><strong>{{AboutHeading}}</strong></h1>
-      <p class="tagLine">{{tagLineHeading}}</p>
+    <div class="row">
+      <div class="col-4"></div>
+    </div>
+  </div>
 
-      <div class="row justify-content-center">
-        @for(items of HeroAboutUsContent; track items.title1){
-          <div class="col-3 d-flex justify-content-center">
-            <div class="card logoCard text-center">
-              <img class="logo" [src]="items.logo" alt="{{items.title1}}">
-              <h5 class="headerColor">{{items.title1}}</h5>
-              <h6 style="margin-top: -10px" class="headerSecondaryColor">{{items.title2}}</h6>
+</div>
+    <div class="doctors ">
+
+
+      <div class="row d_flex">
+
+        @for(items of aboutUsContent; track items.title){
+          <div class=" col-md-6">
+            <div id="ho_efcet" class="reader text_align_center">
+              <i><img src="images/doctor1.png" alt="#"></i>
+              <h3>{{items.title}}</h3>
+              <p>{{items.content}}</p>
+              <span><img src="images/do.png" alt="#"></span>
             </div>
           </div>
         }
       </div>
 
-
-      <div class="row">
-      <div class="col-4"></div>
     </div>
-    </div>
-
   </div>
+
+
+
+
+
+<div class="about mt-3">
+
+    <div class="row d_flex">
+      @for(items of whyChooseUsContent; track items.title){
+      <div class="col-md-7">
+        <div class="titlepage text_align_left">
+          <h2>{{items.title}} </h2>
+          <p>{{items.content}}
+          </p>
+
+        </div>
+      </div>
+      <div class="col-md-5">
+
+        <div class="about_img text_align_center">
+          <figure><img [src]="items.photo" alt="#"></figure>
+        </div>
+      </div>
+      }
+    </div>
 
 </div>
 
+
+
+
+
+</div>
+<div class="cases">
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="titlepage text_align_center ">
+        <h2>Why we are the best</h2>
+      </div>
+    </div>
+  </div>
+  <div class="row d_flex">
+    @for ( items of whyWeAreTheBest; track items.title){
+      <div class=" col-md-4">
+        <div class="latest text_align_center">
+          <figure><img src="images/cases1.png" alt="#"></figure>
+
+          <div class="nostrud">
+            <h3>{{items.title}}</h3>
+            <p>{{items.content}}</p>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>
 
 <app-call-to-action></app-call-to-action>
 
 
-
-<div class="mt-5  container-fluid  d-flex justify-content-center align-items-center"  >
-  <div class="text-center" style="width: 50%;">
-
-    <h3 class="mt-5  custom-underline text-primary"><strong>Find a doctor</strong></h3>
-
-    <h1 class="display-3"><strong>Qualified Healthcare Professionals</strong></h1>
-
-
-
-  </div>
-</div>
-
-
-<div class="container mb-5">
-  <div class="row">
-    @for(items of doctors; track items.name){
-    <div class="col-md-6 mb-4">
-  <div class="card shadow-lg border-0">
-    <div class="row">
-      <div class="col-6"><img src="/image/team.jpg" alt="aboutUs" class="profileImage"></div>
-      <div class="col-6">
-        <h2 class="text-primary mt-5">{{items.name}}</h2>
-        <h6 class="text-primary ">{{items.specialization}}</h6>
-        <p style="text-align: justify; padding: 15px">{{items.description}}</p>
-        <hr>
-<div class="row">
-  <div class="col-auto">
-    <img class="socialImageLogo" src="/logo/whatsApp.svg" alt="whatsApp">
-  </div>
-  <div class="col-auto">
-    <img class="socialImageLogo" src="/logo/facebook.svg" alt="whatsApp">
-  </div>
-</div>
-
-
-      </div>
-    </div>
-    </div>
-  </div>
-    }
-    </div>
-  <div class="center-button">
-    <button class="btn btn-primary mt-3 viewMoreDoctors" routerLink="/doctors">View All Doctors</button>
-  </div>
-
-</div>
 
 
